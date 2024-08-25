@@ -1,24 +1,25 @@
 # ensemble_llms
 
 ## Ollama Set-up
-[Ollama](https://ollama.ai/) installed on Windows. 
-Alternatively, it can be installed on linux with:
-```linux
-curl -fsSL https://ollama.com/install.sh | sh
 
-## Installation 
+[Ollama](https://ollama.ai/) can be installed on Windows. Alternatively, it can be installed on Linux with:
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+## Installation
 1. Install the haystack and ollama framework necessary to run the RAG pipeline.
 
 ```python
 pip install haystack-ai
-
+```
 2. Pull the necessary LLMs model from Ollama
 ```python
 ollama pull llama3.1:8b
 ollama pull mistral
 ollama pull phi3:medium
 ollama pull gemma2
-
+```
 ## Data Preparation
 
 The following CSV files are the one used: 
@@ -27,7 +28,7 @@ The following CSV files are the one used:
 
 ## Configuration
 
-In `main.py`, you can adjust the `sample_size` variable to set the number of tweets to be classified.
+In `main.py`, you can adjust the `sample_size` variable to set the number of tweets to be classified. Ideally, this would set between 100000 and 200000
 
 ## Running the Script
 
