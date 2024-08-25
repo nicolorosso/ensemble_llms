@@ -3,7 +3,7 @@
 ## Ollama Set-up
 [Ollama](https://ollama.ai/) installed on Windows. 
 Alternatively, it can be installed on linux with:
-```python
+```linux
 curl -fsSL https://ollama.com/install.sh | sh
 
 ## Installation 
