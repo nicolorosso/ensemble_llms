@@ -3,17 +3,20 @@
 ## Ollama Set-up
 [Ollama](https://ollama.ai/) installed on Windows. 
 Alternatively, it can be installed on linux with:
-'''linux 
+
+```linux
 curl -fsSL https://ollama.com/install.sh | sh
 
 
 
 ## Installation 
 1. Install the haystack and ollama framework necessary to run the RAG pipeline.
-'''python
+
+```python
 pip install haystack-ai
+
 2. Pull the necessary LLMs model from Ollama
-'''python
+```python
 ollama pull llama3.1:8b
 ollama pull mistral
 ollama pull phi3:medium
