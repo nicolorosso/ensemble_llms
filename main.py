@@ -250,7 +250,7 @@ def aggregate_classifications(result: Dict[str, any]) -> Dict[str, any]:
 async def run_pipeline():
     document_store = initialize_document_store()
 
-    scientific_papers_path = [PATH_TO_SCIENTIFIC_PAPERS.CSV]
+    scientific_papers_path = 'PATH_TO_abstracts_with_topics.csv'
     load_and_index_documents(scientific_papers_path, document_store)
 
     embedding_pipeline = create_embedding_pipeline()
@@ -260,7 +260,7 @@ async def run_pipeline():
         for model_name in ["llama3.1:8b", "mistral", "phi3:medium", "gemma2"]
     }
 
-    tweets_file_path = 'PATH_TO_TWEETS.CSV'
+    tweets_file_path = 'PATH_TO_antiscience-withlanguage-all-tweets.csv'
     sample_size = 150000
     start_time = time.time()
     tweets = load_sample_tweets(tweets_file_path, sample_size)
