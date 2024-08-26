@@ -119,7 +119,7 @@ def initialize_document_store() -> QdrantDocumentStore:
 def load_and_index_documents(file_path: str, document_store: QdrantDocumentStore):
     logger.info("Loading and indexing documents...")
     df = pd.read_csv(file_path)
-    documents = [Document(content=row['abstract'], meta={'topic': row['topic']}) for _, row in df.iterrows()]
+    documents = [Document(content=row['Abstract'], meta={'topic': row['Topic']}) for _, row in df.iterrows()]
 
     indexing_pipeline = Pipeline()
     sparse_doc_embedder = FastembedSparseDocumentEmbedder(model="prithvida/Splade_PP_en_v1")
@@ -261,7 +261,7 @@ async def run_pipeline():
     }
 
     tweets_file_path = 'PATH_TO_TWEETS.CSV'
-    sample_size = 5
+    sample_size = 150000
     start_time = time.time()
     tweets = load_sample_tweets(tweets_file_path, sample_size)
     logger.info(f"Loaded {len(tweets)} sample tweets in {time.time() - start_time:.2f} seconds")
