@@ -24,7 +24,7 @@ ollama pull gemma2
 ## Data Preparation
 
 The following CSV files are the one used: 
-- `abstract_with_topics.csv`: Contains scientific papers for context
+- `abstracts_with_topics.csv`: Contains scientific papers for context
 - `antiscience-withlanguage-all-tweets.csv`: Contains tweets for classification (this one has been sent via e-mail)
 
 ## Configuration
