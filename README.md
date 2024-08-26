@@ -1,4 +1,5 @@
-# ensemble_llms
+# Ensemble LLMs for data labelling
+Ollama is used to install and manage the LLM models, while Haystack provides the framework for building the RAG pipeline. The two are separate but complementary: first, you'll install the LLM models via Ollama, and then use them through Haystack's pipeline structure. All required Python libraries are listed in the requirements.txt file, except for Ollama itself and the LLM models, which need to be installed separately as per the instructions below
 
 ## Ollama Set-up
 
@@ -7,11 +8,11 @@
 curl -fsSL https://ollama.com/install.sh | sh
 ```
 
-## Installation
-1. Install the haystack and ollama framework necessary to run the RAG pipeline.
+## Haystack and Ollama set up
+1. Install the haystack and Ollama-haystack framework necessary to run the RAG pipeline.
 
 ```python
-pip install haystack-ai
+pip install haystack-ai ollama-haystack
 ```
 2. Pull the necessary LLMs model from Ollama
 ```python
