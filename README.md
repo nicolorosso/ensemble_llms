@@ -18,13 +18,13 @@ pip install haystack-ai ollama-haystack
 ```python
 ollama pull llama3.1:8b
 ollama pull mistral
-ollama pull phi3:medium
+ollama pull phi3:mini
 ollama pull gemma2
 ```
 ## Data Preparation
 
 The following CSV files are the one used: 
-- `abstracts_with_topics.csv`: Contains scientific papers for context
+- `scientific_papers.csv`: Contains the (reduced) scientific papers for context
 - `antiscience-withlanguage-all-tweets.csv`: Contains tweets for classification (this one has been sent via e-mail)
 
 ## Configuration
