@@ -29,7 +29,7 @@ The following CSV files are the one used:
 
 ## Configuration
 
-In `main.py`, you can adjust the `sample_size` variable to set the number of tweets to be classified. Ideally, this would set between 100000 and 200000
+In `main.py`, you can adjust the `sample_size` variable to set the number of tweets to be classified. Ideally, this would set between 50000 and 7000
 
 ## Running the Script
 
