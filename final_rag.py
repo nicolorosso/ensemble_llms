@@ -362,7 +362,7 @@ async def run_pipeline():
     
     # Initialize document store and load documents
     document_store = initialize_document_store()
-    scientific_papers_path = r"C:\Users\nrosso\Documents\thesis_project\notebooks\experiments\scientific_papers.csv"
+    scientific_papers_path = r"PATH_TO_SCIENTIFIC_PAPERS"
     await load_and_index_documents(scientific_papers_path, document_store)
 
     # Create embedding pipeline
@@ -371,13 +371,13 @@ async def run_pipeline():
     # Create classification pipelines
     pipelines = {
         model_name: create_hybrid_rag_pipeline(model_name, few_shot_examples, document_store)
-        for model_name in ["llama3.1:8b", 'gemma2']
+        for model_name in ["llama3.1:8b", 'gemma2', 'phi3:mini', 'mistral']
     }
 
     # Load tweets
-    tweets_file_path = r'C:\Users\nrosso\Documents\thesis_project\data\raw\antiscience-withlanguage-all-tweets.csv'
-    sample_size = 1
-    batch_size = 1
+    tweets_file_path = r'PATH_TO_THE_TWEETS'
+    sample_size = 80000
+    batch_size = 100
     
     all_tweets = await load_sample_tweets(tweets_file_path, sample_size)
     logger.info(f"Loaded {len(all_tweets)} sample tweets in {time.time() - start_time:.2f} seconds")
