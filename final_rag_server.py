@@ -604,7 +604,7 @@ async def run_pipeline():
         model_name: create_hybrid_rag_pipeline(
             model_name, few_shot_examples, document_store
         )
-        for model_name in ["llama3.1:8b", "gemma2", "phi3:mini", "mistral"]
+        for model_name in ["llama3.1:8b"]
     }
 
     # Load tweets
