@@ -1,1 +1,3 @@
+.gitignore
 antiscience-withlanguage-all-tweets.csv
+risultati llama/classification_results_final.csv
