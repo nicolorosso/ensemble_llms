@@ -1,3 +1,4 @@
 .gitignore
 antiscience-withlanguage-all-tweets.csv
 risultati llama/classification_results_final.csv
+risultati gemma2/classification_results_final.csv
